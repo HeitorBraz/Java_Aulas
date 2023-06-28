@@ -1,0 +1,56 @@
+package Classes;
+
+// Classe Fornecedor
+public class Fornecedor  extends Pessoa{
+    
+    private float valorCredito;
+    private float valorDivida;
+    
+    // Método Construtor
+    public Fornecedor(String nome, String endereco, String telefone, float valorCredito, float valorDivida) {
+        super(nome, endereco, telefone);
+        this.valorCredito = valorCredito;
+        this.valorDivida = valorDivida;
+                
+    }
+
+    // Métodos Get
+    public float getValorCredito() {
+        return valorCredito;
+    }
+
+    public float getValorDivida() {
+        return valorDivida;
+    }
+
+    // Métodos Set
+    public void setValorCredito(float valorCredito) {
+        this.valorCredito = valorCredito;
+    }
+
+    public void setValorDivida(float valorDivida) {
+        this.valorDivida = valorDivida;
+    }
+    
+    // Método Obter Saldo
+    public float obterSaldo(){
+        
+        return valorCredito - valorDivida;
+        
+    }
+    
+    // Método toString
+    public String toString(){
+        
+        return "Dados do Fornecedor:\n" 
+                + super.toString()
+                + "\nValor do Crédito: " + valorCredito
+                + "\nValor da Dívida: " + valorDivida
+                + "\nValor do Saldo: " + this.obterSaldo();
+        
+    }
+    
+    
+    
+    
+}

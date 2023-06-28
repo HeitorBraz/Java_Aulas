@@ -1,0 +1,15 @@
+import Classes.Turma;
+
+// Classe de Teste
+public class Teste {
+
+    public static void main(String[] args) {
+        
+        // Criação do Objeto
+        Turma turma1 = new Turma("Matemática", "A1B2C3", 160, "Henrique", "D4E5F6", "Matutino", "C105");
+        
+        // Teste de Saída do Objeto
+        System.out.println(turma1.toString());
+    }
+    
+}

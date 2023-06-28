@@ -1,0 +1,70 @@
+package Classes;
+
+// Classe Disciplina
+public class Turma extends Disciplina {
+    
+    // Variáveis
+    private String nomeProfessor;
+    private String codigoTurma;
+    private String turno;
+    private String sala;
+    
+    // Método Construtor
+    public Turma(String nomeDisciplina, String codigoDisciplina, int cargaHoraria, String nomeProfessor, String codigoTurma, String turno, String sala) {
+        super(nomeDisciplina, codigoDisciplina, cargaHoraria);
+        this.nomeProfessor = nomeProfessor;
+        this.codigoTurma = codigoTurma;
+        this.turno = turno;
+        this.sala = sala;
+    }
+    
+    // Métodos Gets
+    public String getNomeProfessor() {
+        return nomeProfessor;
+    }
+
+    public String getCodigoTurma() {
+        return codigoTurma;
+    }
+
+    public String getTurno() {
+        return turno;
+    }
+
+    public String getSala() {
+        return sala;
+    }
+
+    // Métodos Sets
+    public void setNomeProfessor(String nomeProfessor) {
+        this.nomeProfessor = nomeProfessor;
+    }
+
+    public void setCodigoTurma(String codigoTurma) {
+        this.codigoTurma = codigoTurma;
+    }
+
+    public void setTurno(String turno) {
+        this.turno = turno;
+    }
+
+    public void setSala(String sala) {
+        this.sala = sala;
+    }
+    
+    // Método toString
+    @Override
+    public String toString(){
+        
+        return "Dados da Turma:\n " 
+                + super.toString()
+                +"\nNome do Professor: " + nomeProfessor
+                +"\nCódigo da Turma: " + codigoTurma
+                +"\nTurno: " + turno
+                +"\nSala: " + sala;
+        
+    }
+    
+    
+    
+}

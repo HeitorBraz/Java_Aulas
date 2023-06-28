@@ -1,0 +1,33 @@
+package Classes;
+
+// Classe Cachorro
+public class Cachorro extends Animais{
+    
+    // Variável única
+    private String raca;
+    
+    // Método Construtor
+    public Cachorro(String nome, double peso, String raca) {
+        super(nome, peso);
+        this.raca = raca;
+        
+    }
+
+    // Métodos Gets
+    public String getRaca() {
+        return raca;
+    }
+
+    // Métodos Sets
+    public void setRaca(String raca) {
+        this.raca = raca;
+    }
+    
+    // Método toString
+    @Override
+    public String toString(){
+        return super.toString() + "\nRaça: " + raca;
+    }
+    
+    
+}

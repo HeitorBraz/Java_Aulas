@@ -1,0 +1,54 @@
+package Classes;
+
+// Classe Operário
+public class Operario extends Empregado{
+    
+    // Variáveis do Objeto
+    private float valorProducao;
+    private float comissao;
+    
+    // Método Construtor
+    public Operario(String nome, String endereco, String telefone, int codigoSetor, float salarioBase, float impostoPorcentagem, float valorProducao, float comissao) {
+        super(nome, endereco, telefone, codigoSetor, salarioBase, impostoPorcentagem);
+        this.valorProducao = valorProducao;
+        this.comissao = comissao;
+    }
+    
+    // Métodos Gets
+    public float getValorProducao() {
+        return valorProducao;
+    }
+
+    public float getComicao() {
+        return comissao;
+    }
+
+    // Métodos Sets
+    public void setValorProducao(float valorProducao) {
+        this.valorProducao = valorProducao;
+    }
+
+    public void setComicao(float comissao) {
+        this.comissao = comissao;
+    }
+    
+    //Método calcularSalario
+    @Override
+    public float calcularSalario(){
+        salarioLiquido = salarioBase - (salarioBase * impostoPorcentagem / 100) + comissao;
+        return salarioLiquido;
+    }
+    
+    //Método toString
+    // Método toString
+    @Override
+    public String toString(){
+        
+        return "\nDados do Operario:\n" + super.toString() 
+                + "\nValor da Produção: " + valorProducao
+                + "\nValor da Comissão: " + comissao;
+
+        
+    }
+    
+}

@@ -1,0 +1,43 @@
+package Classes;
+
+// Classse Vendedor
+public class Vendedor extends Empregado {
+    
+    // Variáveis
+    protected float valorVendas;
+    protected float comissao;
+            
+    // Método Construtor
+    public Vendedor(String nome, String endereco, String telefone, int codigoSetor, float salarioBase, float impostoPorcentagem , float valorVendas, float comissao) {
+        super(nome, endereco, telefone, codigoSetor, salarioBase, impostoPorcentagem);
+        this.valorVendas = valorVendas;
+        this.comissao = comissao;
+    }
+
+    // Métodos Gets
+    public float getValorVendas() {
+        return valorVendas;
+    }
+
+    // Métodos Sets
+    public void setValorVendas(float valorVendas) {
+        this.valorVendas = valorVendas;
+    }
+    
+    // Método Calcular Salário
+    @Override
+    public float calcularSalario(){
+        salarioLiquido = salarioBase - (salarioBase * impostoPorcentagem / 100) + (comissao * valorVendas);
+        return salarioLiquido;
+    }
+
+   // Método toString
+    @Override
+    public String toString(){
+        
+        return "\nDados do Vendedor:\n" + super.toString()
+                + "\nValor das Vendas: " + valorVendas
+                + "\nValor da Comissão: " + comissao;
+                
+    }
+}

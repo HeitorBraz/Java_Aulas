@@ -1,0 +1,33 @@
+package Classes;
+
+// Classe Peixe
+public class Peixe extends Animais{
+    
+    // Variáveis únicas
+    private String tipoHabitat;
+    
+    // Método Construtor
+    public Peixe(String nome, double peso, String tipoHabitat) {
+        
+        super(nome, peso);
+        this.tipoHabitat = tipoHabitat;
+                
+    }
+
+    // Métodos Gets
+    public String getTipoHabitat() {
+        return tipoHabitat;
+    }
+
+    // Métodos Sets
+    public void setTipoHabitat(String tipoHabitat) {
+        this.tipoHabitat = tipoHabitat;
+    }
+
+    // Método toString
+    @Override
+    public String toString(){
+        return super.toString() + "\nHabitat: " + tipoHabitat;
+    }
+    
+}

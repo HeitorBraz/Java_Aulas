@@ -1,0 +1,70 @@
+package Classes;
+
+// Classe Empregado
+public class Empregado extends Pessoa {
+    
+    // Variáveis
+    protected int codigoSetor;
+    protected float salarioBase;
+    protected float impostoPorcentagem;
+    protected float salarioLiquido;
+    
+    // Método Construtor
+    public Empregado(String nome, String endereco, String telefone, int codigoSetor, float salarioBase, float impostoPorcentagem ) {
+        super(nome, endereco, telefone);
+        this.codigoSetor = codigoSetor;
+        this.impostoPorcentagem = impostoPorcentagem;
+        this.salarioBase = salarioBase;
+        
+        
+    }
+
+    // Métodos Gets
+    public int getCodigoSetor() {
+        return codigoSetor;
+    }
+
+    public float getSalarioBase() {
+        return salarioBase;
+    }
+
+    public float getImpostoPorcentagem() {
+        return impostoPorcentagem;
+    }
+
+    // Métodos Sets
+    public void setCodigoSetor(int codigoSetor) {
+        this.codigoSetor = codigoSetor;
+    }
+
+    public void setSalarioBase(float salarioBase) {
+        this.salarioBase = salarioBase;
+    }
+
+    public void setImpostoPorcentagem(float impostoPorcentagem) {
+        this.impostoPorcentagem = impostoPorcentagem;
+    }
+    
+    // Método Calcular Salário
+    public float calcularSalario(){
+        
+        salarioLiquido = salarioBase - (salarioBase * impostoPorcentagem / 100);
+        return salarioLiquido;
+        
+    }
+    
+    // Método toString
+    @Override
+    public String toString(){
+        
+        return "\nDados do Empregado:\n" + super.toString() 
+                + "\nCódigo do Setor: " + codigoSetor
+                + "\nSalário Base: " + salarioBase
+                + "\n Imposto: " + impostoPorcentagem
+                + "\n Salário Líquido: " + salarioLiquido;
+        
+    }
+    
+    //
+    
+}

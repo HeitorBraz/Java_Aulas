@@ -1,0 +1,59 @@
+package q3fornecedor;
+
+import Classes.Administrador;
+import Classes.Empregado;
+import Classes.Fornecedor;
+import Classes.Operario;
+import Classes.Vendedor;
+
+public class Teste {
+
+    public static void main(String[] args) {
+       
+        // Criação do Objeto Fornecedor
+        Fornecedor fornecedor1 = new Fornecedor("Coca-Cola", "Taguatinga", "1234-5678", 50000, 25000);
+        
+        // Teste de Saída do Forncedor
+        System.out.println(fornecedor1.toString());
+        
+        // Teste do Método obterSaldo
+        System.out.println("\nO Valor do Saldo é: " + fornecedor1.obterSaldo());
+        
+        // Criação do Objeto Empregado
+        Empregado empregado1 = new Empregado("Gabriel", "Taguatinga", "12345678", 12345, 10000, 10);
+        
+        // Método Calcular Salário
+        System.out.println("\nO Salário Líqudo Empregado é: " + empregado1.calcularSalario());
+        
+        // Teste de Saída do Empregado
+        System.out.println(empregado1.toString());
+                
+        // Criação do Objeto Administrado
+        Administrador adm1 = new Administrador("Julia", "Ceilandia", "12345678", 1500, 15000, 15, 2500);
+        
+        //Método Calcular Salário
+        System.out.println("\nSalário Líquido é:" + adm1.calcularSalario());
+        
+        // Teste da Saída do Administrador
+        System.out.println(adm1.toString());
+        
+        // Criacao do Objeto Operiario
+        Operario operario1 = new Operario("Gabriel", "Taguatinga", "12345678", 12345, 10000, 10, 2500, 1);
+        
+        // Teste do Calcular Salário
+        System.out.println("\nSalário Líquido é:" + operario1.calcularSalario());
+        
+        // Teste da Saída do Operário
+        System.out.println(operario1.toString());
+        
+        // Criação do Objeto Vendedor
+        Vendedor vendedor1 = new Vendedor("Gabriel", "Taguatinga", "12345678", 12345, 10000, 10, 2500, 1);
+        
+       // Teste do Calcular Salário
+        System.out.println("\nSalário Líquido é:" + vendedor1.calcularSalario());
+        
+        // Teste da Saída do Operário
+        System.out.println(vendedor1.toString());
+    }
+    
+}

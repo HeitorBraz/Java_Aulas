@@ -1,0 +1,52 @@
+package Classes;
+
+// Classe Disciplina
+public class Disciplina {
+    
+    // Variáveis
+    private String nomeDisciplina;
+    private String codigoDisciplina;
+    private int cargaHoraria;
+    
+    // Método Construtor
+    public Disciplina(String nomeDisciplina, String codigoDisciplina, int cargaHoraria){
+        this.nomeDisciplina = nomeDisciplina;
+        this.codigoDisciplina = codigoDisciplina;
+        this.cargaHoraria = cargaHoraria;
+    }
+
+    // Métodos Gets
+    public String getNomeDisciplina() {
+        return nomeDisciplina;
+    }
+
+    public String getCodigoDisciplina() {
+        return codigoDisciplina;
+    }
+
+    public int getCargaHoraria() {
+        return cargaHoraria;
+    }
+
+    // Métodos Sets
+    public void setNomeDisciplina(String nomeDisciplina) {
+        this.nomeDisciplina = nomeDisciplina;
+    }
+
+    public void setCodigoDisciplina(String codigoDisciplina) {
+        this.codigoDisciplina = codigoDisciplina;
+    }
+
+    public void setCargaHoraria(int cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
+    }
+    
+    // Método toString
+    @Override
+    public String toString(){
+        return "\nNome da Disciplina: " + nomeDisciplina
+                + "\nCódigo Disciplina: " + codigoDisciplina
+                + "\nCarga Horária: " + cargaHoraria;
+    }
+    
+}

@@ -1,0 +1,44 @@
+package Classes;
+
+// Classe Animais
+public class Animais {
+    
+    // Variáveis da Classe
+    protected String nome;
+    protected double peso;
+    
+    // Método Construtor
+    public Animais(String nome, double peso){
+        
+        this.nome = nome;
+        this.peso = peso;
+        
+    }
+
+    // Métodos Gets
+    public String getNome() {
+        return nome;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    // Métodos Sets
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+    
+    // Método toString
+        @Override
+    public String toString(){
+        return "\nNome: " + nome
+                +"\nPeso: " + peso;
+               
+    }
+     
+}

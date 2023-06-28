@@ -1,0 +1,45 @@
+package Classes;
+
+// Classe Administrador
+public class Administrador extends Empregado{
+    
+    // Variáveis
+    protected float ajudaDeCusto;
+    
+    // Método Construtor
+    public Administrador(String nome, String endereco, String telefone, int codigoSetor, float salarioBase, float impostoPorcentagem, float ajudaDeCusto) {
+        super(nome, endereco, telefone, codigoSetor, salarioBase, impostoPorcentagem);
+        this.ajudaDeCusto = ajudaDeCusto;
+    }
+    
+    //
+
+    // Métodos Get
+    public float getAjudaDeCusto() {
+        return ajudaDeCusto;
+    }
+
+    // Métodos Set
+    public void setAjudaDeCusto(float ajudaDeCusto) {
+        this.ajudaDeCusto = ajudaDeCusto;
+    }
+    
+    // Método Calcular Salário
+    @Override
+    public float calcularSalario(){
+        
+        salarioLiquido = salarioBase - (salarioBase * impostoPorcentagem / 100); 
+        return salarioLiquido;
+        
+    }
+    
+    // Método 
+    @Override
+    public String toString(){
+        
+        return "\nDados do Administrador: " + super.toString()
+                + "\nAjuda de Custo: " + ajudaDeCusto;
+        
+    }
+    
+}
